@@ -7,7 +7,7 @@ function EmployTable(props) {
     const [myTable, setTable] = useState(props.table);
 
     function addRows(){
-        myTable.map(person=>(<tr><td></td><td>{person.name.first}</td></tr>))
+        return props.table.map(person=>(<tr><td></td><td>{person.name.first}</td></tr>))
     }
 
     return (
@@ -22,7 +22,7 @@ function EmployTable(props) {
                 </tr>
             </thead>
             <tbody>
-                {addRows}
+                {addRows()}
             </tbody>
         </Table>
     )

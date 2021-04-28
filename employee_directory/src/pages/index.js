@@ -5,7 +5,7 @@ import API from '../utils/api'
 
 class Home extends React.Component {
     state = {
-        myArr: [{}]
+        myArr: []
     }
    
     componentDidMount() {
@@ -19,7 +19,7 @@ class Home extends React.Component {
     };
 
 render(){
-    //console.log(this.state.myArr);
+   // console.log(this.state.myArr);
     return (
         <div>
             <Search />
