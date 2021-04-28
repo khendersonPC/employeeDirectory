@@ -12,7 +12,7 @@ class Home extends React.Component {
         API.getEmploy()
             .then(res =>
                 this.setState({  
-                    myArr: res.data,
+                    myArr: res.data.results,
                 })
             )
             .catch(err => console.log(err));

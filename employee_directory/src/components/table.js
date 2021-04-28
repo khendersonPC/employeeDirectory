@@ -7,6 +7,7 @@ function EmployTable(props) {
     const [myTable, setTable] = useState(props.table);
 
     function addRows(){
+        console.log(props.table);
         return props.table.map(person=>(<tr><td></td><td>{person.name.first}</td></tr>))
     }
 
