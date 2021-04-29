@@ -22,8 +22,8 @@ function EmployTable(props) {
             <thead>
                 <tr>
                     <th></th>
-                    <th>First Name</th>
-                    <th>Last Name <button className="AZ" onClick={props.sortAZ}>AZ</button> <button className="ZA">ZA</button> /></th>
+                    <th>First Name<button className="AZ" onClick={()=>props.sortAZ("first")}>AZ</button> <button className="ZA" onClick={()=>props.sortZA("first")}>ZA</button></th>
+                    <th>Last Name <button className="AZ" onClick={()=>props.sortAZ("last")}>AZ</button> <button className="ZA" onClick={()=>props.sortZA("last")}>ZA</button></th>
                     <th>email</th>
                     <th>Phone Number</th>
                 </tr>
