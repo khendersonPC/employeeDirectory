@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
-import { Table } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Table } from 'react-bootstrap';
 
+// import * as Icons from "@fortawesome/fontawesome-free-solid"
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function EmployTable(props) {
-
     const [myTable, setTable] = useState(props.table);
 
     function addRows(){
         console.log(props.table);
-        return props.table.map(person=>(<tr><td></td><td>{person.name.first}</td></tr>))
+        return props.table.map(person=>(<tr>
+            <td><img src={person.picture.thumbnail} alt="employee"/></td>
+            <td>{person.name.first}</td>
+            <td>{person.name.last}</td>
+            <td>{person.email}</td>
+            <td>{person.phone}</td>
+            </tr>))
     }
 
     return (
@@ -17,7 +24,7 @@ function EmployTable(props) {
                 <tr>
                     <th></th>
                     <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Last Name <button className="AZ">AZ</button> <button className="ZA">ZA</button> /></th>
                     <th>email</th>
                     <th>Phone Number</th>
                 </tr>
