@@ -8,7 +8,6 @@ function EmployTable(props) {
     const [myTable, setTable] = useState(props.table);
 
     function addRows(){
-        console.log(props.table);
         return props.table.map(person=>(<tr>
             <td><img src={person.picture.thumbnail} alt="employee"/></td>
             <td>{person.name.first}</td>
@@ -24,7 +23,7 @@ function EmployTable(props) {
                 <tr>
                     <th></th>
                     <th>First Name</th>
-                    <th>Last Name <button className="AZ">AZ</button> <button className="ZA">ZA</button> /></th>
+                    <th>Last Name <button className="AZ" onClick={props.sortAZ}>AZ</button> <button className="ZA">ZA</button> /></th>
                     <th>email</th>
                     <th>Phone Number</th>
                 </tr>
